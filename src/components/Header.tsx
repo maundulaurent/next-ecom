@@ -66,7 +66,7 @@ export default function Navbar() {
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Home</Link>
                 <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">About</Link>
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Category</Link>
-                <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Cart</Link>
+                <Link href="/cart" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Cart</Link>
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Checkout</Link>
                     <div className="relative group">
                         {/* The Shop link with arrow */}
@@ -83,19 +83,19 @@ export default function Navbar() {
                             className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-200 ease-in-out"
                         >
                             <Link
-                            href="/category1"
+                            href="/"
                             className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                             >
                             Category 1
                             </Link>
                             <Link
-                            href="/category2"
+                            href="/"
                             className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                             >
                             Category 2
                             </Link>
                             <Link
-                            href="/category3"
+                            href="/"
                             className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                             >
                             Category 3
