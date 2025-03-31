@@ -16,7 +16,7 @@ export async function POST(request) {
 export async function GET() {
   try {
     await dbConnect();
-    const products = await Product.find({});
+    const products = await Product.find({}).populate('category'); // Populate category
     return NextResponse.json(products);
   } catch (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
