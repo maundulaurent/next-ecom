@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Define scrollbar colors as variables for light mode */
+  /* --scrollbar-track: #d1d5db; gray-300 */
+  --scrollbar-track: #171717; /* gray-300 */
+  --scrollbar-thumb: #4b5563; /* -500 */
+  --scrollbar-thumb-hover: #4b5563; /* -600 */
 }
 
 @theme inline {
@@ -15,7 +20,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #171717;
+    /* Adjust scrollbar colors for dark mode */
+    --scrollbar-track: #4b5563; /* gray-600 */
+    --scrollbar-thumb: #808080; 
+    --scrollbar-thumb-hover: #808080; 
   }
 }
 
@@ -23,4 +32,32 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add custom scrollbar styles */
+@layer utilities {
+  .custom-scrollbar {
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* Thinner scrollbar */
+    height: 6px; /* For horizontal scrollbar, if any */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
 }
