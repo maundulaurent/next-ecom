@@ -38,26 +38,26 @@ export default function Sidebar() {
            
             <h2 className="text-xs font-semibold text-gray-400 py-2">PRODUCTS</h2>
                 <div className="ml-4">
-                    <Link href="./admin/products" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/products" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         All Products
                     </Link>
-                    <Link href="./admin/products" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/add-product" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         Add Product
                     </Link>
-                    <Link href="./admin/products" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/products" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         Edit Product
                     </Link>
                 </div>
                 <h2 className="text-xs font-semibold text-gray-400 py-2">CATEGORIES</h2>
                 <div className="ml-4">
-                    <Link href="/" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/categories" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         All Categories
                     </Link>
-                    <Link href="/" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/add-category" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         Add Category
                     </Link>
@@ -68,11 +68,11 @@ export default function Sidebar() {
                 </div>
                 <h2 className="text-xs font-semibold text-gray-400 py-2">BLOG</h2>
                 <div className="ml-4">
-                    <Link href="/" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/blogs" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         All Blogs
                     </Link>
-                    <Link href="/" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
+                    <Link href="/admin/add-blog" className="flex items-center text-gray-300 hover:text-white gap-2 text-sm mb-2">
                         <BsDash />
                         Add Blog
                     </Link>

@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div >
       <Header />
-      <div className="py-8">
+      <div className="">
         <Home />
       </div>
       <Footer />
