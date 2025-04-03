@@ -67,7 +67,7 @@ export default function Navbar() {
                 <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">About</Link>
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Category</Link>
                 <Link href="/cart" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Cart</Link>
-                <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Checkout</Link>
+                <Link href="/checkout" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Checkout</Link>
                     <div className="relative group">
                         {/* The Shop link with arrow */}
                         <Link
@@ -103,7 +103,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Megamenu 2</Link>
-                <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Contact</Link>
+                <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">Contact</Link>
             </div>
         </nav>
     );

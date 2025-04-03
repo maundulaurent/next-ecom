@@ -1,30 +1,29 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok, FaPinterest, FaYoutube } from "react-icons/fa";
 import { BsApple, BsGoogle } from "react-icons/bs";
+import { MdLocationOn, MdPhone, MdEmail } from "react-icons/md";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="pt-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* eStore Section (Larger Column) */}
+          {/* eCom Section (Larger Column) */}
           <div className="md:col-span-3">
-            <h2 className="text-lg font-semibold mb-4">eStore</h2>
+            <h2 className="text-lg font-semibold mb-4">eCom</h2>
             <p className="text-sm text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in nibh vehicula, facilisis magna ut, consectetur lorem.
+              eCom is your one-stop online store for quality fashion, home essentials, and accessories. Based in Nairobi, we deliver style and convenience across Kenya and beyond.
             </p>
             <div className="text-sm text-gray-600 space-y-2">
               <p className="flex items-center">
-                <span className="material-icons-outlined mr-2">location_on</span>
-                123 Fashion Street, New York, NY 10001
+                <MdLocationOn className="mr-2" /> Nairobi, Kenya
               </p>
               <p className="flex items-center">
-                <span className="material-icons-outlined mr-2">phone</span>
-                +1 (555) 123-4567
+                <MdPhone className="mr-2" /> +254 758 144 225
               </p>
               <p className="flex items-center">
-                <span className="material-icons-outlined mr-2">email</span>
-                hello@example.com
+                <MdEmail className="mr-2" /> hello@machcom.com
               </p>
             </div>
           </div>
@@ -33,12 +32,24 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h2 className="text-lg font-semibold mb-4">Shop</h2>
             <ul className="text-sm text-gray-600 space-y-2">
-              <li>New Arrivals</li>
-              <li>Bestsellers</li>
-              <li>Women&#39;s Clothing</li>
-              <li>Men&#39;s Clothing</li>
-              <li>Accessories</li>
-              <li>Sale</li>
+              <li>
+                <Link href="/">New Arrivals</Link>
+              </li>
+              <li>
+                <Link href="/">Bestsellers</Link>
+              </li>
+              <li>
+                <Link href="/">Women's Clothing</Link>
+              </li>
+              <li>
+                <Link href="/">Men's Clothing</Link>
+              </li>
+              <li>
+                <Link href="/">Accessories</Link>
+              </li>
+              <li>
+                <Link href="/">Sale</Link>
+              </li>
             </ul>
           </div>
 
@@ -46,12 +57,24 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h2 className="text-lg font-semibold mb-4">Support</h2>
             <ul className="text-sm text-gray-600 space-y-2">
-              <li>Help Center</li>
-              <li>Order Status</li>
-              <li>Shipping Info</li>
-              <li>Returns &amp; Exchanges</li>
-              <li>Size Guide</li>
-              <li>Contact Us</li>
+              <li>
+                <Link href="/">Help Center</Link>
+              </li>
+              <li>
+                <Link href="/">Order Status</Link>
+              </li>
+              <li>
+                <Link href="/">Shipping Info</Link>
+              </li>
+              <li>
+                <Link href="/">Returns & Exchanges</Link>
+              </li>
+              <li>
+                <Link href="/">Size Guide</Link>
+              </li>
+              <li>
+                <Link href="/">Contact Us</Link>
+              </li>
             </ul>
           </div>
 
@@ -59,12 +82,24 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h2 className="text-lg font-semibold mb-4">Company</h2>
             <ul className="text-sm text-gray-600 space-y-2">
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Press</li>
-              <li>Affiliates</li>
-              <li>Responsibility</li>
-              <li>Investors</li>
+              <li>
+                <Link href="/">About Us</Link>
+              </li>
+              <li>
+                <Link href="/">Careers</Link>
+              </li>
+              <li>
+                <Link href="/">Press</Link>
+              </li>
+              <li>
+                <Link href="/">Affiliates</Link>
+              </li>
+              <li>
+                <Link href="/">Responsibility</Link>
+              </li>
+              <li>
+                <Link href="/">Investors</Link>
+              </li>
             </ul>
           </div>
 
@@ -91,27 +126,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
-        <div className="mt-10 py-6 text-sm bg-blue-50 text-gray-600 text-center">
-          <p>We Accept:</p>
-          <div className="flex justify-center space-x-4 mt-2">
-            <img src="/icons/paypal.svg" alt="PayPal" className="h-6" />
-            <img src="/icons/visa.svg" alt="Visa" className="h-6" />
-            <img src="/icons/mastercard.svg" alt="MasterCard" className="h-6" />
-            <img src="/icons/google-pay.svg" alt="Google Pay" className="h-6" />
-            <img src="/icons/shopify.svg" alt="Shopify" className="h-6" />
-            <img src="/icons/cash.svg" alt="Cash" className="h-6" />
-          </div>
-          <div className="mt-6 space-x-4">
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookies Settings</a>
-          </div>
-          <p className="mt-4">© Copyright machcom. All Rights Reserved.</p>
-          <p>Designed by <a href="/" className="text-blue-500">machcom</a></p>
+      <div className="mt-10 py-6 text-sm bg-blue-50 text-gray-600 text-center">
+        <div className="mt-6 space-x-4">
+          <Link href="/" className="hover:underline">Terms of Service</Link>
+          <Link href="/" className="hover:underline">Privacy Policy</Link>
+          <Link href="/" className="hover:underline">Cookies Settings</Link>
         </div>
-      
+        <p className="mt-4">© Copyright eCom. All Rights Reserved.</p>
+        <p>
+          Designed by <Link href="/" className="text-blue-500 hover:underline">Machcom</Link>
+        </p>
+      </div>
     </footer>
   );
 };
