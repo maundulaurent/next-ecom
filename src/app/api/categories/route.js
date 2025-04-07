@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import dbConnect from "@/lib/mongodb";
-import Categories from "@/models/Categories";
+import dbConnect from "../../../lib/mongodb";
+import Categories from "../../../models/Categories";
 
 export async function POST(request) {
     try {
