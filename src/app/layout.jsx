@@ -1,9 +1,9 @@
 // src/app/layout.jsx
 "use client";
 import { useState, useEffect } from "react";
+// import './css/style.css'; // Add additional styles
 import './globals.css'; // Import global styles (Tailwind included)
-// import '../css/euclid-circular-a-font.css'; // Add custom font CSS
-// import '../css/style.css'; // Add additional styles
+// import './css/euclid-circular-a-font.css'; // Add custom font CSS
 import { ModalProvider } from './context/QuickViewModalContext'; // Quick view context
 import { CartModalProvider } from './context/CartSidebarModalContext'; // Cart context
 import { ReduxProvider } from '../redux/provider'; // Redux provider
