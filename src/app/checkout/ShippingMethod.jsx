@@ -4,9 +4,9 @@ import Image from "next/image";
 const ShippingMethod = () => {
   const [shippingMethod, setShippingMethod] = useState("free");
   return (
-    <div className="bg-white shadow-1 rounded-[10px] mt-7.5">
-      <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">
-        <h3 className="font-medium text-xl text-dark">Shipping Method</h3>
+    <div className="bg-white shadow-lg rounded-[10px] mt-7.5">
+      <div className="border-b border-gray-300 py-5 px-4 sm:px-8.5">
+        <h3 className="font-semibold text-lg text-gray-600">Shipping Method</h3>
       </div>
 
       <div className="p-4 sm:p-8.5">
@@ -20,7 +20,7 @@ const ShippingMethod = () => {
                 type="checkbox"
                 name="free"
                 id="free"
-                className="sr-only"
+                className="sr-only  "
                 onChange={() => setShippingMethod("free")}
               />
               {/* selectShipping === 'free' ? 'border-4 border-blue' : 'border border-gray-4' */}
@@ -51,7 +51,7 @@ const ShippingMethod = () => {
                 className={`flex h-4 w-4 items-center justify-center rounded-full ${
                   shippingMethod === "fedex"
                     ? "border-4 border-blue"
-                    : "border border-gray-4"
+                    : "border border-gray-400"
                 }`}
               ></div>
             </div>

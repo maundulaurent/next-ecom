@@ -50,7 +50,7 @@ const SingleListItem = ({ item }) => {
                 handleQuickViewUpdate();
               }}
               aria-label="button for quick view"
-              className="flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue"
+              className="cursor-pointer flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue-900"
             >
               <svg
                 className="fill-current"
@@ -77,7 +77,7 @@ const SingleListItem = ({ item }) => {
 
             <button
               onClick={() => handleAddToCart()}
-              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
+              className="cursor-pointer inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-[5px] bg-blue-600 text-white ease-out duration-200 hover:bg-blue-900"
             >
               Add to cart
             </button>
@@ -85,7 +85,7 @@ const SingleListItem = ({ item }) => {
             <button
               onClick={() => handleItemToWishList()}
               aria-label="button for favorite select"
-              className="flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue"
+              className="cursor-pointer flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue-900"
             >
               <svg
                 className="fill-current"
@@ -108,7 +108,7 @@ const SingleListItem = ({ item }) => {
 
         <div className="w-full flex flex-col gap-5 sm:flex-row sm:items-center justify-center sm:justify-between py-5 px-4 sm:px-7.5 lg:pl-11 lg:pr-12">
           <div>
-            <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5">
+            <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue-900 mb-1.5">
               <Link href="/shop-details"> {item.title} </Link>
             </h3>
 

@@ -2,6 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+
+import { useAppSelector } from "../redux/store";
+import { useSelector } from "react-redux";
+import { selectTotalPrice } from "../redux/features/cart-slice";
+import { useCartModalContext } from "../app/context/CartSidebarModalContext";
+
 import { FaCartPlus } from 'react-icons/fa6';
 import { CiHeart, CiUser, CiSearch } from 'react-icons/ci';
 import { FaPhone, FaBars, FaTimes } from 'react-icons/fa';
@@ -9,6 +15,14 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openCartModal } = useCartModalContext();
+
+  const product = useAppSelector((state) => state.cartReducer.items);
+  const totalPrice = useSelector(selectTotalPrice);
+
+  const handleOpenCartModal = () => {
+    openCartModal();
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -41,7 +55,7 @@ export default function Navbar() {
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4 border-b border-gray-200">
         {/* Logo */}
-        <h2 className="text-gray-800 text-xl font-semibold">machcom</h2>
+        <h2 className="text-gray-800 text-2xl font-semibold">eCom</h2>
 
         {/* Search Bar - Hidden on mobile */}
         <div className="hidden sm:flex w-1/3 max-w-xs px-2 py-1 border border-blue-500 rounded-xl justify-between bg-white shadow-md hover:shadow-lg transition-shadow duration-200">
@@ -58,18 +72,32 @@ export default function Navbar() {
         {/* Icons and Hamburger */}
         <div className="flex items-center space-x-4">
           <div className="flex space-x-4">
-            <CiUser className="w-6 h-6" />
-            <div className="relative">
+            <CiUser className="cursor-pointer w-6 h-6" />
+            <span className="hidden xl:block w-px h-7.5 bg-gray-500"></span>
+            {/* <div className="relative">
               <CiHeart className="w-6 h-6" />
               <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                 2
               </span>
-            </div>
-            <div className="relative">
-              <FaCartPlus className="w-6 h-6" />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                4
-              </span>
+            </div> */}
+            
+            <div onClick={handleOpenCartModal} className="flex items-center gap-3 cursor-pointer">
+              <div 
+               
+                className="relative">
+                <FaCartPlus className="w-6 h-6" />
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                {product.length}
+                </span>
+              </div>
+              <div className="-mt-3">
+                <span className="uppercase text-xs font-semibold text-gray-400">
+                  cart
+                </span>
+                <p className="text-dark text-xs font-semibold">
+                  Ksh. {totalPrice}
+                </p>
+              </div>
             </div>
           </div>
           {/* Hamburger Menu Button */}
@@ -166,10 +194,14 @@ export default function Navbar() {
             <CiSearch className="w-6 h-6 text-white bg-blue-800 rounded-md" />
           </div>
         </div>
+
+       
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden sm:flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-x-6 py-5">
+      <div className="hidden max-w-7xl mx-auto py-5 sm:flex justify-between px-4 sm:px-6 lg:px-8">
+        <div className="sm:flex   space-x-6">
+
         <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
           Home
         </Link>
@@ -226,6 +258,14 @@ export default function Navbar() {
         >
           Contact
         </Link>
+      </div>
+
+        <div className="flex items-center gap-2 hover:text-blue-600">
+            <CiHeart className="w-6 h-6" />
+            <span className="justify-center ">
+                <Link href="wishlist" className="text-gray-600 text-sm font-semibold justify-center hover:text-blue-600">Wishlist</Link>
+            </span>
+        </div>
       </div>
     </nav>
   );

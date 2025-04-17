@@ -27,11 +27,11 @@ const SingleItem = ({ item }) => {
   };
 
   return (
-    <div className="flex items-center border-t border-gray-3 py-5 px-7.5">
+    <div className="flex items-center border-t border-gray-300 py-5 px-7.5">
       <div className="min-w-[400px]">
         <div className="flex items-center justify-between gap-5">
           <div className="w-full flex items-center gap-5.5">
-            <div className="flex items-center justify-center rounded-[5px] bg-gray-2 max-w-[80px] w-full h-17.5">
+            <div className="flex items-center justify-center rounded-[5px] bg-gray-100 max-w-[80px] w-full h-17.5">
               <Image width={200} height={200} src={item.imgs?.thumbnails[0]} alt="product" />
             </div>
 
@@ -49,7 +49,7 @@ const SingleItem = ({ item }) => {
       </div>
 
       <div className="min-w-[275px]">
-        <div className="w-max flex items-center rounded-md border border-gray-3">
+        <div className="w-max flex items-center rounded-md border border-gray-300">
           <button
             onClick={() => handleDecreaseQuantity()}
             aria-label="button for remove product"
@@ -108,7 +108,7 @@ const SingleItem = ({ item }) => {
         <button
           onClick={() => handleRemoveFromCart()}
           aria-label="button for remove product from cart"
-          className="flex items-center justify-center rounded-lg max-w-[38px] w-full h-9.5 bg-gray-2 border border-gray-3 text-dark ease-out duration-200 hover:bg-red-light-6 hover:border-red-light-4 hover:text-red"
+          className="flex items-center justify-center rounded-lg max-w-[38px] w-full h-9.5 bg-gray-100 border border-gray-300 text-dark ease-out duration-200 hover:bg-red-light-6 hover:border-red-light-4 hover:text-red-600"
         >
           <svg
             className="fill-current"
